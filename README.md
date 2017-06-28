@@ -16,3 +16,6 @@ then start the server and visit http://localhost:4321 to view:
 To see a full list of available NPM scripts, use the following command:
 
     npm run
+
+## Demonstration
+![Todo Application](https://github.com/anthonyhastings/react-todo-app/raw/master/images/todo-application.gif "Todo Application")

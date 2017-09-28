@@ -1,2 +1,7 @@
+import React from "react";
+import ReactDom from "react-dom";
+import HelloWorld from "./HelloWorld";
+import "../styles/index.scss";
+
 const root = document.querySelector("#todo-spa");
-root.innerHTML = HelloWorld;
+ReactDom.render(<HelloWorld />, root);

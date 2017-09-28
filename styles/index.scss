@@ -1,4 +1,7 @@
+$color: red;
+
 #todo-spa {
+  color: $color;
   display: flex;
   justify-content: center;
   padding: 100px;

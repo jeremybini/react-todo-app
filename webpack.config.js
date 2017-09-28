@@ -12,7 +12,30 @@ const webpackConfiguration = {
   output: {
     filename: "js/[name].js",
     path: distPath
-  }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "html/index.html"
+    })
+  ]
 };
 
 module.exports = webpackConfiguration;

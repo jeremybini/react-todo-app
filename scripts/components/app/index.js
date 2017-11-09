@@ -4,7 +4,11 @@ import todos from "../../../server/data";
 
 class App extends React.Component {
   render() {
-    return <TodoList todos={todos} />;
+    return (
+      <div>
+        <TodoList todos={todos} />
+      </div>
+    );
   }
 }
 

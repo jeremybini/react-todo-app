@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Todo(props) {
-  return <li>{props.todo.text}</li>;
+  return (
+    <li>
+      {props.todo.text}
+    </li>
+  );
 }
 
 class TodoList extends React.Component {

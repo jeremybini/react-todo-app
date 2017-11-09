@@ -48,4 +48,24 @@ React is a view-layer/UI library developed by Facebook. It helps solve a lot of 
 * [JSX](https://reactjs.org/docs/introducing-jsx.html#jsx-represents-objects) - We use JSX to create React elements. These elements represent our virtual DOM
 * [Components](https://reactjs.org/docs/components-and-props.html) - Independent, reusable pieces of UI. Allow us to isolate functionality. Rendering a component generates a React element.
 * [Props](https://reactjs.org/docs/components-and-props.html#rendering-a-component) - Props allow us to pass information to our components
-* [State](https://reactjs.org/docs/state-and-lifecycle.html) - React elements can maintain their own internal state. Updating state through `this.setState` calls triggers a rerender.
+
+## Class 3 - React: states, events
+
+### Rerendering
+* The process of rerendering can be kicked off in two ways:
+    * `forceUpdate()`
+    * `setState()`
+
+### State
+* Component state is set in the constructor: `this.state = someValue`
+* **setState**
+    * Component state is updated by using `this.setState()`
+    * Directly modifying `this.state` will not trigger a rerender
+    * Merges the previous state with the new state
+    * `setState` can be asynchronous
+
+### Events
+[Events](https://reactjs.org/docs/handling-events.html)
+* Events Handlers: camelCased versions of DOM event handlers
+* [SyntheticEvents](https://reactjs.org/docs/events.html) - browser-agnostic event objects
+

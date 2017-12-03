@@ -1,19 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Todo(props) {
+function Todo({ todo, toggleTodo }) {
   return (
-    <li>
-      {props.todo.text}
+    <li
+      onClick={() => toggleTodo(todo.id)}
+      className={todo.completed ? "completed-todo" : null}
+    >
+      {todo.text}
     </li>
   );
 }
 
 class TodoList extends React.Component {
   renderTodos() {
-    const { todos } = this.props;
+    const { todos, toggleTodo } = this.props;
 
-    return todos.map(todo => <Todo key={todo.id} todo={todo} />);
+    return todos.map(todo =>
+      <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+    );
   }
 
   render() {
@@ -26,6 +31,7 @@ class TodoList extends React.Component {
   }
 }
 TodoList.propTypes = {
+  toggleTodo: PropTypes.func.isRequired,
   todos: PropTypes.array.isRequired
 };
 TodoList.defaultProps = {
